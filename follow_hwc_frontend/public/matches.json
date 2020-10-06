@@ -1,0 +1,51 @@
+[
+    {
+        "date": "September 26, 2020 at 2:30:30 PM UTC+3",
+        "games": [
+            "IYBfswLl",
+            "POrOrj67",
+            "1cq8GTQG",
+            "LslWwtFt",
+            "ppZsCXMK",
+            "GHgTLAlX",
+            "fFkl8Btw",
+            "0BRzXYg6",
+            "p7jYoE6K"
+        ],
+        "opponents": [
+            "lecw",
+            "mindhunter0101"
+        ]
+    },
+    {
+        "date": "2020-09-11 13:00:00",
+        "opponents": [
+            "Ben_634", "mindhunter0101"
+        ],
+        "games": [
+
+        ],
+        "result": {
+            "mindhunter0101": 10,
+            "Ben_634": 0
+        }
+    },
+    {
+        "opponents": [
+            "osu5nc",
+            "sanju1973"
+        ],
+        "date": "2020-09-12 09:00:00",
+        "games": [
+            "zM1Ylsuu",
+            "Ddmxg2RS",
+            "CN9lZnKc",
+            "v65C5CGx",
+            "2FbgFq2F",
+            "5nmB8O0U",
+            "SBs2Q4vx",
+            "PGwKfknE",
+            "9KFW74da"
+        ]
+    }
+]
