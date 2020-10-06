@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
+
 function Game(props) {
-  //     <a href={`https://lichess.org/${props.id}`} target="_blank">Link</a>
   return <p>
-    <iframe
+    <iframe title={`Game ${props.id}`}
       src={`https://lichess.org/embed/${props.id}#1000?theme=auto&amp;bg=auto`}
       width={600} height={397} frameborder={0}></iframe>
   </p>
+}
+
+function Games(props) {
+  const {ids} = props;
+  const [isOpen, setIsOpen] = useState(false);
+  return <div>
+    <button onClick={() => {
+        setIsOpen(!isOpen);
+    }}>Expand</button>
+    {isOpen && ids.map(id =><Game id={id}/>)}
+  </div>
 }
 
 function Match(props) {
@@ -18,7 +29,11 @@ function Match(props) {
   return <>
     <h1>{opponent1} vs {opponent2}</h1>
     <p>Took place on {details.date}</p>
-    {games.length ? games.map(g =><Game id={g}/>) : <p>No games played</p>}
+    {
+      games.length ? 
+        <Games ids={games}/> : 
+        <p>No games played</p>
+    }
   </>;
 }
 
@@ -66,6 +81,7 @@ function App() {
   return (
     <>
     <h1>Follow Horde World Championship</h1>
+    <h2>Brought you by <a href='https://hordechessblog.com/'>Horde Chess Blog</a></h2>
     <div className="App">
       <Matches/>
     </div>
