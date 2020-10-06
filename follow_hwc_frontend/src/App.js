@@ -20,7 +20,6 @@ function Games(props) {
   const [isOpen, setIsOpen] = useState(false);
   return <div>
     {ids.length} games 
-    
     <Button onClick={() => {
         setIsOpen(!isOpen);
     }}>{isOpen ? "collapse" : "Expand"}</Button>
@@ -31,11 +30,12 @@ function Games(props) {
 function Match(props) {
   const {details} = props;
   const [opponent1, opponent2] = details.opponents;
+  const [result1, result2] = details.result || [null, null];
   const {games} = details;
 
-  return <Card>
+  return <Card className="mx-auto my-2">
     <Card.Body>
-    <Card.Title>{opponent1} vs {opponent2}</Card.Title>
+    <Card.Title>{opponent1} vs {opponent2} ({result1} - {result2})</Card.Title>
     <Card.Subtitle>Took place on {details.date}</Card.Subtitle>
     {
       games.length ? 
@@ -46,6 +46,15 @@ function Match(props) {
   </Card>;
 }
 
+function Round(props) {
+  const {number, matches} = props;
+
+  return <>
+    <p>Round number {number}</p>
+    {matches?.map(m => <Match details={m}></Match>)}
+  </>
+}
+
 class Matches extends React.Component {
 
   constructor(props) {
@@ -53,7 +62,7 @@ class Matches extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      matches: []
+      rounds: []
     };
   }
 
@@ -62,12 +71,9 @@ class Matches extends React.Component {
       .then(res => res.json())
       .then(
         result => {
-          result.sort((match1, match2) => {
-            return Date.parse(match1.date) - Date.parse(match2.date);
-          });
           this.setState({
             isLoaded: true,
-            matches: result
+            rounds: result
           })
         },
         error => {
@@ -79,20 +85,21 @@ class Matches extends React.Component {
   }
 
   render() {
-    const {isLoaded, matches, error} = this.state;
+    const {isLoaded, rounds, error} = this.state;
     return <>
     <h1>Matches:</h1>
     {isLoaded || <p>Loading...</p>}
     {error && <p>Error: {error?.toString()}</p>}
-    {matches?.map(m => <Match details={m}/>)}
+    {rounds?.rounds?.map(r => <Round {...r}/>)}
     </>;
   }
 }
 
+
 function App() {
   return (
     <>
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" fixed='top'>
       <Navbar.Brand href="#home">Follow the Horde World Championship</Navbar.Brand>
       <Nav.Link href='https://hordechessblog.com/' target="_blank">by Horde Chess Blog</Nav.Link>
     </Navbar>

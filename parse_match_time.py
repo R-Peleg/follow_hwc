@@ -4,6 +4,7 @@ Parse matches times from the Lichess thread
 """
 import sys
 import json
+import csv
 import parsedatetime
 from urllib.parse import urlencode
 import requests
@@ -48,25 +49,40 @@ def parse_match_line(line):
     return words[0].strip('@').rstrip(','), words[2].strip('@').rstrip(','), calandar.parse(' '.join(words[3:]), sourceTime=source_date)
 
 
+def parse_result_line(line):
+    return [float(i) for i in line.split('-')]
+
 def main():
     if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} MATCH_LINE")
+        print(f"Usage: {sys.argv[0]} ROUND_FILE")
         return
-    opponent1, opponent2, parsed_date = parse_match_line(sys.argv[1])
-    time_struct, status = parsed_date
-    if status == 3:
-        match_time = datetime(*time_struct[:6])
-        games = get_games(opponent1, opponent2, match_time.date() - timedelta(days=1), match_time.date() + timedelta(days=1))
-    else:
-        print("Failed to parse datetime")
-        match_time = ""
-        games = []
 
-    print(json.dumps({
-        "opponents": [opponent1, opponent2],
-        "date": str(match_time),
-        "games": games
-    }, indent=1))
+    matches = []
+    with open(sys.argv[1]) as round_f:
+        round_reader = csv.reader(round_f, delimiter='\t')
+        for match_line, result_text in round_reader:
+            opponent1, opponent2, parsed_date = parse_match_line(match_line)
+            try:
+                result = parse_result_line(result_text)
+            except ValueError:
+                result = None
+            time_struct, status = parsed_date
+            if status == 3:
+                match_time = datetime(*time_struct[:6])
+                games = get_games(opponent1, opponent2, match_time.date() - timedelta(days=1), match_time.date() + timedelta(days=1))
+            else:
+                print("Failed to parse datetime")
+                match_time = ""
+                games = []
+
+            matches.append({
+                "opponents": [opponent1, opponent2],
+                "result": result,
+                "date": str(match_time),
+                "games": games
+            })
+
+    print(json.dumps(matches, indent=1))
 
 
 if __name__ == "__main__":

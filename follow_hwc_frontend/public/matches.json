@@ -1,51 +1,569 @@
-[
-    {
-        "date": "September 26, 2020 at 2:30:30 PM UTC+3",
-        "games": [
-            "IYBfswLl",
-            "POrOrj67",
-            "1cq8GTQG",
-            "LslWwtFt",
-            "ppZsCXMK",
-            "GHgTLAlX",
-            "fFkl8Btw",
-            "0BRzXYg6",
-            "p7jYoE6K"
-        ],
-        "opponents": [
-            "lecw",
-            "mindhunter0101"
-        ]
-    },
-    {
-        "date": "2020-09-11 13:00:00",
-        "opponents": [
-            "Ben_634", "mindhunter0101"
-        ],
-        "games": [
-
-        ],
-        "result": {
-            "mindhunter0101": 10,
-            "Ben_634": 0
+{
+    "rounds": [
+        {
+            "number": 1,
+            "matches": [
+                {
+                    "opponents": [
+                        "The_Knight_of_Spring",
+                        "PepsiNGaming"
+                    ],
+                    "result": [
+                        9,
+                        1
+                    ],
+                    "date": "2020-09-09 17:00:00",
+                    "games": [
+                        "hmHXUk8L",
+                        "7n1XwR7t",
+                        "SuRp3Ql6",
+                        "ihpSPOUo",
+                        "pzBjqpMA",
+                        "sbtTo7rV"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Ben_634",
+                        "mindhunter0101"
+                    ],
+                    "result": [
+                        0,
+                        10
+                    ],
+                    "date": "2020-09-11 17:00:00",
+                    "games": []
+                },
+                {
+                    "opponents": [
+                        "Jus_Jacome",
+                        "MiroMiljkovic"
+                    ],
+                    "result": [
+                        1.5,
+                        7.5
+                    ],
+                    "date": "2020-09-11 18:40:00",
+                    "games": [
+                        "worj965m",
+                        "BIVBef73",
+                        "lREoyLSE",
+                        "ReHaCykm",
+                        "AvCyqXNn",
+                        "qvzFxB9z",
+                        "uffT8odJ",
+                        "vGYR3PnB",
+                        "a8u61EyY"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "lecw",
+                        "Jakeypoo83"
+                    ],
+                    "result": [
+                        9,
+                        1
+                    ],
+                    "date": "2020-09-11 21:00:00",
+                    "games": [
+                        "g8twOlFY",
+                        "bzLLC4G8",
+                        "EvmG7wfm",
+                        "5xnFeiWg",
+                        "FmKKUjAe",
+                        "pH4nR565",
+                        "SGmHTO3H",
+                        "MsTitP1R",
+                        "cZ5X0XtU",
+                        "D9ohieHP"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "osu5nc",
+                        "sanju1973"
+                    ],
+                    "result": [
+                        6,
+                        3
+                    ],
+                    "date": "2020-09-12 13:00:00",
+                    "games": [
+                        "zM1Ylsuu",
+                        "Ddmxg2RS",
+                        "CN9lZnKc",
+                        "v65C5CGx",
+                        "2FbgFq2F",
+                        "5nmB8O0U",
+                        "SBs2Q4vx",
+                        "PGwKfknE",
+                        "9KFW74da"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Vicentolski",
+                        "The_Human_Paradox"
+                    ],
+                    "result": [
+                        6,
+                        1
+                    ],
+                    "date": "2020-09-12 15:30:00",
+                    "games": [
+                        "tGXSBF2H",
+                        "pl5BSw9J",
+                        "sjEbX9Tz",
+                        "nfmgewnq",
+                        "OpRHpMT4",
+                        "pm5UgqGR",
+                        "t7LWFkFL"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "GlenGratz",
+                        "ReallyWayTooBad"
+                    ],
+                    "result": [
+                        6,
+                        0
+                    ],
+                    "date": "2020-09-12 17:00:00",
+                    "games": [
+                        "yleMhPcy",
+                        "bQcssoeX",
+                        "1mjXLGvB",
+                        "ENWIj7jN",
+                        "7ZFcOuNk",
+                        "Nzk8E8vr"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Whitedancingrockstar",
+                        "db1000c"
+                    ],
+                    "result": [
+                        0,
+                        10
+                    ],
+                    "date": "2020-09-12 18:00:00",
+                    "games": [
+                        "MpCdwRac",
+                        "ikmUxB5P",
+                        "vqf2Z4Jm",
+                        "FfW5xlLa",
+                        "otgjEAWA",
+                        "VQxbQCnt"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Chijss",
+                        "PhilippeSaner"
+                    ],
+                    "result": [
+                        0,
+                        6
+                    ],
+                    "date": "2020-09-13 18:30:00",
+                    "games": [
+                        "6Mdp8mzM",
+                        "LRyfwvNJ",
+                        "i3WKopiT",
+                        "1JKJ13hw",
+                        "6efBFn0u",
+                        "DbSeev7T"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "seth_777",
+                        "kubalibre420"
+                    ],
+                    "result": [
+                        0,
+                        6
+                    ],
+                    "date": "2020-09-15 21:00:00",
+                    "games": [
+                        "sC6EwEBF",
+                        "puk3YP6U",
+                        "YSbCK331",
+                        "OtMRamtc",
+                        "TaUpoQBf",
+                        "jgovZ4Pp"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "soccerfreak1213",
+                        "RayHolt"
+                    ],
+                    "result": [
+                        0,
+                        6
+                    ],
+                    "date": "2020-09-17 15:00:00",
+                    "games": [
+                        "PKQx0C8H",
+                        "0pOy7HBH",
+                        "MNLO8vU7"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "venufork",
+                        "Deneris"
+                    ],
+                    "result": [
+                        0,
+                        10
+                    ],
+                    "date": "2020-09-17 16:00:00",
+                    "games": [
+                        "RN38I6DT",
+                        "KBOp9ysv",
+                        "JeAXl5JS",
+                        "o4jYvyWm",
+                        "QmoK2UuW",
+                        "yh6wNhaX",
+                        "UmOLN5w3",
+                        "JopCGtH4",
+                        "3ZoHqlIR",
+                        "nF5lRASj"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "iblunderAlot124",
+                        "chesschamp2300"
+                    ],
+                    "result": [
+                        6,
+                        1
+                    ],
+                    "date": "2020-09-19 15:10:00",
+                    "games": [
+                        "G9UT6JAg",
+                        "9Hi8DbrH"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "hritic333",
+                        "Chess_Attack_Juras"
+                    ],
+                    "result": [
+                        6,
+                        2
+                    ],
+                    "date": "2020-09-19 16:00:00",
+                    "games": [
+                        "rZmhwpX2",
+                        "KvMzAdQO",
+                        "txWzWjwD",
+                        "M3l9eywL",
+                        "mCj2yUAm",
+                        "K8W6FRRf",
+                        "G3WbODN7",
+                        "XS1vnzuJ"
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "matches": [
+                {
+                    "opponents": [
+                        "David55555",
+                        "iblunderAlot124"
+                    ],
+                    "result": [
+                        2,
+                        6
+                    ],
+                    "date": "2020-09-21 10:00:00",
+                    "games": [
+                        "zYSfDzWR",
+                        "kMRkBxfH",
+                        "b7wLI8kL",
+                        "XemBQvZl",
+                        "Rx0Yk1LM",
+                        "Gl1OzgMc",
+                        "Z3AudJBI",
+                        "nNWgsnpa"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Stubenfisch",
+                        "VariantsOnly"
+                    ],
+                    "result": [
+                        9,
+                        1
+                    ],
+                    "date": "2020-09-22 09:15:00",
+                    "games": [
+                        "f2g9FYME",
+                        "I5mf8WrC",
+                        "qUStWFvt",
+                        "MGJgfQ3n",
+                        "e4xvjtj9",
+                        "OD1nW3w3",
+                        "MsF6JPyF",
+                        "2PKErhNl",
+                        "puzwdzdL",
+                        "w3U2FPEG"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Deneris",
+                        "eagle_444"
+                    ],
+                    "result": [
+                        6,
+                        3
+                    ],
+                    "date": "2020-09-24 17:00:00",
+                    "games": [
+                        "YNb5J96n",
+                        "QtTXBF9v",
+                        "Q1KA41m6",
+                        "Q2vjmNkb",
+                        "NROWYhSA",
+                        "zEmrpSa4",
+                        "6lQaGC8L",
+                        "hVPVmCwp",
+                        "pofr73xm"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "sanju1973",
+                        "seth_777"
+                    ],
+                    "result": null,
+                    "date": "2020-09-25 12:30:00",
+                    "games": []
+                },
+                {
+                    "opponents": [
+                        "Sinamon73",
+                        "wgoto744"
+                    ],
+                    "result": [
+                        6,
+                        0
+                    ],
+                    "date": "2020-09-25 20:30:00",
+                    "games": [
+                        "qgbOuIhf",
+                        "7vAmfMVR",
+                        "3YMsXRwi",
+                        "2zRDMjRw",
+                        "OWGBSmOd",
+                        "hNm2u7vI"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "mindhunter0101",
+                        "lecw"
+                    ],
+                    "result": [
+                        10,
+                        0
+                    ],
+                    "date": "2020-09-26 18:30:00",
+                    "games": [
+                        "p7jYoE6K",
+                        "0BRzXYg6",
+                        "fFkl8Btw",
+                        "u4MHUvSM",
+                        "GHgTLAlX",
+                        "ppZsCXMK",
+                        "LslWwtFt",
+                        "1cq8GTQG",
+                        "POrOrj67",
+                        "IYBfswLl"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "RayHolt",
+                        "Vicentolski"
+                    ],
+                    "result": [
+                        6,
+                        0
+                    ],
+                    "date": "2020-09-27 02:15:00",
+                    "games": [
+                        "T3FECDZH",
+                        "PFEDzZ4M",
+                        "Zdx7uDzV",
+                        "1dBQD0Zl",
+                        "tv4UwiFi",
+                        "ohYhE0pf"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Chess_Attack_Juras",
+                        "AshwiniKumar"
+                    ],
+                    "result": [
+                        6,
+                        1
+                    ],
+                    "date": "2020-09-28 02:45:00",
+                    "games": [
+                        "e8TlZ6EZ",
+                        "WUJlBfah",
+                        "XR4rMAGe",
+                        "1TySJgcG",
+                        "ZDU9dEzp",
+                        "YPtFcCMl",
+                        "uzrlxqHb"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "Jakeypoo83",
+                        "Ben_634"
+                    ],
+                    "result": [
+                        6,
+                        0
+                    ],
+                    "date": "2020-09-30 17:00:00",
+                    "games": [
+                        "W9hI7FKm",
+                        "WJV4Uoz8",
+                        "7UANAn6E",
+                        "5RrjI5Jk",
+                        "nx4uQ7nI",
+                        "ndW6RF8X",
+                        "sKGd2zxB",
+                        "6Vb7zp0M"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "vabatgrav",
+                        "Chijss"
+                    ],
+                    "result": [
+                        0,
+                        10
+                    ],
+                    "date": "2020-10-01 18:00:00",
+                    "games": []
+                },
+                {
+                    "opponents": [
+                        "MiroMiljkovic",
+                        "Whitedancingrockstar"
+                    ],
+                    "result": [
+                        5.5,
+                        4.5
+                    ],
+                    "date": "2020-10-02 21:00:00",
+                    "games": [
+                        "N0TXTfyN",
+                        "OELzhkgi",
+                        "wJAdnwsY",
+                        "AjmbaftH",
+                        "dyLKlhON",
+                        "y0guHle5",
+                        "cxwirq6Z",
+                        "rgGbZD96",
+                        "db0jUwyB",
+                        "ecPjiFYC"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "kubalibre420",
+                        "osu5nc"
+                    ],
+                    "result": [
+                        0,
+                        6
+                    ],
+                    "date": "2020-10-03 17:00:00",
+                    "games": [
+                        "FMTp6k6g",
+                        "mG7iHrfr",
+                        "O2xVHInH",
+                        "ZOFcVbXI",
+                        "sY6bhcUu",
+                        "m3GqlAZ6"
+                    ]
+                },
+                {
+                    "opponents": [
+                        "TCF_Namelecc",
+                        "GlenGratz"
+                    ],
+                    "result": [
+                        6,
+                        1
+                    ],
+                    "date": "2020-10-03 18:00:00",
+                    "games": [
+                        "sdSwnxA5",
+                        "ULSxizCn",
+                        "rKSHTRyI",
+                        "2GKZ43LV",
+                        "LdUngJUD",
+                        "KpU21SAA",
+                        "vtT1PjEc"
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "matches": [
+                {
+                    "opponents": [
+                        "The_Knight_of_Spring",
+                        "BADABOYYYYY"
+                    ],
+                    "result": [
+                        6.5,
+                        0.5
+                    ],
+                    "date": "2020-10-04 17:30:00",
+                    "games": []
+                },
+                {
+                    "opponents": [
+                        "osu5nc",
+                        "seth_777"
+                    ],
+                    "result": null,
+                    "date": "2020-10-06 21:00:00",
+                    "games": []
+                },
+                {
+                    "opponents": [
+                        "iblunderAlot124",
+                        "The_Human_Parasite"
+                    ],
+                    "result": null,
+                    "date": "2020-10-09 13:30:00",
+                    "games": []
+                }
+            ]
         }
-    },
-    {
-        "opponents": [
-            "osu5nc",
-            "sanju1973"
-        ],
-        "date": "2020-09-12 09:00:00",
-        "games": [
-            "zM1Ylsuu",
-            "Ddmxg2RS",
-            "CN9lZnKc",
-            "v65C5CGx",
-            "2FbgFq2F",
-            "5nmB8O0U",
-            "SBs2Q4vx",
-            "PGwKfknE",
-            "9KFW74da"
-        ]
-    }
-]
+    ]
+}
