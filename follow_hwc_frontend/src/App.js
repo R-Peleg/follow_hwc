@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
 
 function Game(props) {
   return <p>
@@ -16,9 +19,11 @@ function Games(props) {
   const {ids} = props;
   const [isOpen, setIsOpen] = useState(false);
   return <div>
+    {ids.length} games 
+    
     <Button onClick={() => {
         setIsOpen(!isOpen);
-    }}>Expand</Button>
+    }}>{isOpen ? "collapse" : "Expand"}</Button>
     {isOpen && ids.map(id =><Game id={id}/>)}
   </div>
 }
@@ -28,15 +33,17 @@ function Match(props) {
   const [opponent1, opponent2] = details.opponents;
   const {games} = details;
 
-  return <>
-    <h1>{opponent1} vs {opponent2}</h1>
-    <p>Took place on {details.date}</p>
+  return <Card>
+    <Card.Body>
+    <Card.Title>{opponent1} vs {opponent2}</Card.Title>
+    <Card.Subtitle>Took place on {details.date}</Card.Subtitle>
     {
       games.length ? 
         <Games ids={games}/> : 
         <p>No games played</p>
     }
-  </>;
+    </Card.Body>
+  </Card>;
 }
 
 class Matches extends React.Component {
@@ -55,6 +62,9 @@ class Matches extends React.Component {
       .then(res => res.json())
       .then(
         result => {
+          result.sort((match1, match2) => {
+            return Date.parse(match1.date) - Date.parse(match2.date);
+          });
           this.setState({
             isLoaded: true,
             matches: result
@@ -74,7 +84,7 @@ class Matches extends React.Component {
     <h1>Matches:</h1>
     {isLoaded || <p>Loading...</p>}
     {error && <p>Error: {error?.toString()}</p>}
-    <p>{matches?.map(m => <Match details={m}/>)}</p>
+    {matches?.map(m => <Match details={m}/>)}
     </>;
   }
 }
@@ -82,11 +92,13 @@ class Matches extends React.Component {
 function App() {
   return (
     <>
-    <h1>Follow the Horde World Championship</h1>
-    <h2>Brought you by <a href='https://hordechessblog.com/' target="_blank">Horde Chess Blog</a></h2>
-    <div className="App">
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">Follow the Horde World Championship</Navbar.Brand>
+      <Nav.Link href='https://hordechessblog.com/' target="_blank">by Horde Chess Blog</Nav.Link>
+    </Navbar>
+    <Container>
       <Matches/>
-    </div>
+    </Container>
     </>
   );
 }

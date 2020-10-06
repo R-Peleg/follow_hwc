@@ -45,7 +45,7 @@ def get_games(opponent1, opponent2, start_date, end_date):
 
 def parse_match_line(line):
     words = line.split(' ')
-    return words[0].strip('@'), words[2].strip('@'), calandar.parse(' '.join(words[3:]), sourceTime=source_date)
+    return words[0].strip('@').rstrip(','), words[2].strip('@').rstrip(','), calandar.parse(' '.join(words[3:]), sourceTime=source_date)
 
 
 def main():
