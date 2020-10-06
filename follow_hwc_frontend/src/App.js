@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 
 function Game(props) {
@@ -14,9 +16,9 @@ function Games(props) {
   const {ids} = props;
   const [isOpen, setIsOpen] = useState(false);
   return <div>
-    <button onClick={() => {
+    <Button onClick={() => {
         setIsOpen(!isOpen);
-    }}>Expand</button>
+    }}>Expand</Button>
     {isOpen && ids.map(id =><Game id={id}/>)}
   </div>
 }
@@ -80,8 +82,8 @@ class Matches extends React.Component {
 function App() {
   return (
     <>
-    <h1>Follow Horde World Championship</h1>
-    <h2>Brought you by <a href='https://hordechessblog.com/'>Horde Chess Blog</a></h2>
+    <h1>Follow the Horde World Championship</h1>
+    <h2>Brought you by <a href='https://hordechessblog.com/' target="_blank">Horde Chess Blog</a></h2>
     <div className="App">
       <Matches/>
     </div>
