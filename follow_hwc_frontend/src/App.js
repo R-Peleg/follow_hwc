@@ -110,7 +110,6 @@ class Matches extends React.Component {
   render() {
     const {isLoaded, rounds, error} = this.state;
     return <>
-    <h1>Matches:</h1>
     {isLoaded || <p>Loading...</p>}
     {error && <p>Error: {error?.toString()}</p>}
     <Accordion>
@@ -124,7 +123,7 @@ class Matches extends React.Component {
 function App() {
   return (
     <>
-    <Navbar bg="light" expand="lg" fixed='top'>
+    <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">Follow the Horde World Championship</Navbar.Brand>
       <Nav.Link href='https://hordechessblog.com/' target="_blank">by Horde Chess Blog</Nav.Link>
     </Navbar>
