@@ -12,31 +12,31 @@ import Tab from 'react-bootstrap/Tab'
 
 
 function Game(props) {
-  return <p>
-    <iframe title={`Game ${props.id}`}
-      src={`https://lichess.org/embed/${props.id}#1000?theme=auto&amp;bg=auto`}
-      width={600} height={397} frameborder={0}></iframe>
-  </p>
+  const {id, loadIframe} = props;
+  const [wasLoaded, setWasLoaded] = useState(false);
+  if (loadIframe && !wasLoaded) {
+    setWasLoaded(true);
+  }
+
+  return wasLoaded ? <iframe title={`Game ${id}`}
+      src={`https://lichess.org/embed/${id}#1000?theme=auto&amp;bg=auto`}
+      width={600} height={397} frameBorder={0}></iframe> : <>Not loaded</>
+
 }
 
 function Games(props) {
   const {ids} = props;
   const [selectedGame, setSelectedGame] = useState(null);
-  console.log(`Selected game is ${selectedGame}`);
 
   return <>
     <Tabs 
     id='games-tab'
     activeKey={selectedGame}
-    onSelect={(key) => {
-      console.log("key = " + key);
-      setSelectedGame(key);
-    }
-    }>
+    onSelect={(key) => setSelectedGame(key)}>
       {ids.map(
-        (game_id, index) => <Tab eventKey={game_id} title={"Game " + index}>
+        (game_id, index) => <Tab eventKey={game_id} title={"Game " + (index + 1)}>
           <p/>
-          {selectedGame === game_id && <Game key={game_id} id={game_id} />}
+          <Game key={game_id} id={game_id} loadIframe={selectedGame === game_id} />
         </Tab>
       )}
     </Tabs>
