@@ -7,6 +7,8 @@ import Nav from 'react-bootstrap/Nav'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Accordion from 'react-bootstrap/Accordion'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 
 function Game(props) {
@@ -19,14 +21,26 @@ function Game(props) {
 
 function Games(props) {
   const {ids} = props;
-  const [isOpen, setIsOpen] = useState(false);
-  return <div>
-    {ids.length} games 
-    <Button onClick={() => {
-        setIsOpen(!isOpen);
-    }}>{isOpen ? "collapse" : "Expand"}</Button>
-    {isOpen && ids.map(id =><Game id={id}/>)}
-  </div>
+  const [selectedGame, setSelectedGame] = useState(null);
+  console.log(`Selected game is ${selectedGame}`);
+
+  return <>
+    <Tabs 
+    id='games-tab'
+    activeKey={selectedGame}
+    onSelect={(key) => {
+      console.log("key = " + key);
+      setSelectedGame(key);
+    }
+    }>
+      {ids.map(
+        (game_id, index) => <Tab eventKey={game_id} title={"Game " + index}>
+          <p/>
+          {selectedGame === game_id && <Game key={game_id} id={game_id} />}
+        </Tab>
+      )}
+    </Tabs>
+  </>;
 }
 
 function Match(props) {
@@ -58,7 +72,7 @@ function Round(props) {
     </Accordion.Toggle>
     <Accordion.Collapse eventKey={number}>
       <div>
-        {matches?.map(m => <Match details={m}></Match>)}
+        {matches?.map((m, idx) => <Match key={idx} details={m}></Match>)}
       </div>
     </Accordion.Collapse>
   </div>
@@ -100,7 +114,7 @@ class Matches extends React.Component {
     {isLoaded || <p>Loading...</p>}
     {error && <p>Error: {error?.toString()}</p>}
     <Accordion>
-      {rounds?.rounds?.map(r => <Round {...r}/>)}
+      {rounds?.rounds?.map((r, idx) => <Round key={idx} {...r}/>)}
     </Accordion>
     </>;
   }
