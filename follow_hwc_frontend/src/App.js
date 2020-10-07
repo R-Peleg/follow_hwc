@@ -9,12 +9,19 @@ import Container from 'react-bootstrap/Container'
 import Accordion from 'react-bootstrap/Accordion'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-168518736-2');
 
 
 function Game(props) {
   const {id, loadIframe} = props;
   const [wasLoaded, setWasLoaded] = useState(false);
   if (loadIframe && !wasLoaded) {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Display Game',
+      value: id
+    });
     setWasLoaded(true);
   }
 
@@ -123,6 +130,7 @@ class Matches extends React.Component {
 
 
 function App() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <>
     <Navbar bg="light" expand="lg">
