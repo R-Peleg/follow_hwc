@@ -37,6 +37,8 @@ function Games(props) {
         (game_id, index) => <Tab eventKey={game_id} title={"Game " + (index + 1)}>
           <p/>
           <Game key={game_id} id={game_id} loadIframe={selectedGame === game_id} />
+          <p/>
+          <Button onClick={() => setSelectedGame(null)}>Hide</Button>
         </Tab>
       )}
     </Tabs>
